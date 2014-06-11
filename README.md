@@ -1,7 +1,7 @@
 testci
 ======
 
-Test CI 2.2
+Test CodeIgniter 2.2 and Travis CI.
 
 
 Git plugin for Eclipse:
