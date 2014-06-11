@@ -70,10 +70,8 @@
     <h1> http://localhost/testci/<strong>welcome</strong>/<strong>test</strong> </h1>
 	<h1>Execution of <strong>test</strong> method on <strong>Welcome</strong> Controller</h1>
 
-		<code>Welcome->test();</code> <br/>
-		<code>$this->load->view('test_message');</code>
-
-	</div>
+		<code>Welcome-&gt;test();</code> <br/>
+		<code>$this-&gt;load-&gt;view('test_message');</code>
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
 </div>
