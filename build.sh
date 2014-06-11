@@ -1,1 +1,0 @@
-/home/travis/.phpenv/versions/5.5/bin/composer self-update
