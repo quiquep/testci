@@ -4,10 +4,13 @@ class Events extends CI_Controller {
 
 	public function index()
 	{
+		$this->listAll();
+	}
+	
+	public function loadDummyEvent()
+	{
 		$this->load->model('Event');
-		
 		$data['event'] = $this->Event->getDummyEvent();
-		
 		$this->load->view('event_view' , $data);
 	}
 	
@@ -18,13 +21,10 @@ class Events extends CI_Controller {
 	}
 	
 	public function save()
-	{
-			
-			$this->load->model('Event');
-
-			$this->Event->insert_entry();
-			
-			echo 'Se guardo el evento';
+	{	
+		$this->load->model('Event');
+		$this->Event->insert_entry();
+		echo 'Se guardo el evento';
 	}
 	
 	public function listAll()
