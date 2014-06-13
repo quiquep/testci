@@ -67,7 +67,7 @@
 <body>
 
 <div id="container">
-    <h1> Construccion de eventos </h1>
+    <h1> Add new event </h1>
 	<?php echo form_open('events/save'); ?>
        <?php echo "title"; ?>: 
        <?php echo form_input('title'); ?>
@@ -80,8 +80,7 @@
 	   </br>	
 	<?php echo form_submit('mysubmit','Submit!');  ?>
 	<?php echo form_close(); ?>	
-	
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>	
+		
 </div>
 
 </body>
