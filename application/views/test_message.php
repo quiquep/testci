@@ -73,7 +73,6 @@
 		<code>Welcome-&gt;test();</code> <br/>
 		<code>$this-&gt;load-&gt;view('test_message');</code>
 
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>	
 </div>
 
 </body>
