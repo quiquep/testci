@@ -67,15 +67,15 @@
 <body>
 
 <div id="container">
-    <h1> Lista de eventos</h1>
 	<?php foreach ($events as $event) {?>
-		<p> Detalles: <br/> <br/>
+		<p> Details: <br/> <br/>
 		    Title: <?php echo $event->title; ?> <br/>
 		    Description: <?php echo $event->description; ?> <br/>
 		    When: <?php echo $event->dateTime; ?> <br/>
 		</p>
 	<?php } ?>	
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>	
+
+	<?php echo anchor('events/create', 'Create New Event');?>	
 </div>
 
 </body>

@@ -24,13 +24,14 @@ class Events extends CI_Controller {
 	{	
 		$this->load->model('Event');
 		$this->Event->insert_entry();
-		echo 'Se guardo el evento';
+		$this->listAll();
 	}
 	
 	public function listAll()
 	{
-		 $this->load->model('Event');
-		 $data['events'] =$this->Event->getAll();
-		 $this->load->view('list_view' , $data);
+		$this->load->helper('url');
+		$this->load->model('Event');
+		$data['events'] =$this->Event->getAll();
+		$this->load->view('list_view' , $data);
 	}
 }
