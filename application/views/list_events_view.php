@@ -57,7 +57,7 @@
 					     <tr>
 		                  <td><?php echo $event->title; ?></td>
 		                  <td><?php echo $event->description; ?></td>
-		                  <td><?php echo $event->dateTime; ?></td>
+		                  <td><?php echo $event->datetime; ?></td>
 		                </tr>
 				<?php } ?>	
               

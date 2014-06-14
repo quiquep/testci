@@ -16,7 +16,7 @@ class Events extends CI_Controller {
 	public function create()
 	{
 		$this->load->helper('form'); 
-		$this->load->view('create_view');
+		$this->load->view('create_event_view');
 	}
 	
 	public function save()
@@ -25,9 +25,13 @@ class Events extends CI_Controller {
 		$this->listAll();
 	}
 	
-	public function listAll()
+	public function listAll($format='html')
 	{
-		$data['events'] =$this->Event->getAll();
-		$this->load->view('list_view' , $data);
+		$data['events'] = $this->Event->getAll();
+		if($format == 'json') {
+			$this->load->view('list_events_view_json' , $data);
+		} else {
+			$this->load->view('list_events_view' , $data);
+		}
 	}
 }
