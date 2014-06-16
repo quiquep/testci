@@ -34,4 +34,9 @@ class Events extends CI_Controller {
 			$this->load->view('list_events_view' , $data);
 		}
 	}
+	
+	public function admin()
+	{
+		$this->load->view('list_events_admin_view');
+	}
 }
