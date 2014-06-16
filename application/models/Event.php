@@ -2,7 +2,7 @@
 class Event extends CI_Model {
 	var $title;
 	var $description;
-	var $dateTime;
+	var $datetime;
 	
 	function __construct()
 	{
@@ -14,7 +14,7 @@ class Event extends CI_Model {
 		$event = new Event();
 		$event->title ="test title";
 		$event->description = "test description";
-		$event->dateTime = "11/06/2014 11:05";
+		$event->datetime = "11/06/2014 11:05";
 		return $event;
 	}
 	
@@ -22,7 +22,7 @@ class Event extends CI_Model {
     {
         $this->title   = $this->input->POST('title'); 
         $this->description = $this ->input->POST('description');
-        $this->dateTime  = $this->input->POST('datetime');
+        $this->datetime  = $this->input->POST('datetime');
         $this->load->database();
         $this->db->insert('event', $this);
     }

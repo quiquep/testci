@@ -41,7 +41,7 @@
         
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
-          <h2 class="sub-header">Events</h2>
+          <h2 class="sub-header">Events</h2>  
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
@@ -57,7 +57,7 @@
 					     <tr>
 		                  <td><?php echo $event->title; ?></td>
 		                  <td><?php echo $event->description; ?></td>
-		                  <td><?php echo $event->dateTime; ?></td>
+		                  <td><?php echo $event->datetime; ?></td>
 		                </tr>
 				<?php } ?>	
               
@@ -70,4 +70,5 @@
       
     </div>
 
+	    
 <?php include "include/footer.php"; ?>
