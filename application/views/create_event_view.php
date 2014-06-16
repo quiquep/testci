@@ -1,6 +1,8 @@
 <?php include "include/header.php"; ?>
 
-
+	
+	 <link href="<?php echo base_url('/assets/bootstrap/css/datepicker.css'); ?>" rel="stylesheet">
+	
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -50,7 +52,7 @@
 		       <?php echo form_input('description', '','class="form-control"'); ?>
 		       </br>
 		       <?php echo "datetime"; ?>: 
-		       <?php echo form_input('datetime', '','class="form-control"'); ?>	
+		       <input class="datepicker form-control" name="datetime" data-date-format="dd/mm/yyyy">
 			   </br>	
 			<?php echo form_submit('mysubmit','Submit','class="btn btn-info"');  ?>
 			<?php echo form_close(); ?>	
@@ -61,5 +63,12 @@
       </div>
       
     </div>
+    
+    <script src="<?php echo base_url('/assets/bootstrap/js/bootstrap.min.js'); ?>"></script>
+    <script src="<?php echo base_url('/js/vendor/jquery-min.js'); ?>"></script>
+    <script src="<?php echo base_url('/assets/bootstrap/js/bootstrap-datepicker.js'); ?>"></script>
+    <script type="text/javascript">
+    	$('.datepicker').datepicker()
+	</script>
 
 <?php include "include/footer.php"; ?>

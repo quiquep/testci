@@ -22,7 +22,9 @@ class Event extends CI_Model {
     {
         $this->title   = $this->input->POST('title'); 
         $this->description = $this ->input->POST('description');
-        $this->datetime  = $this->input->POST('datetime');
+        $date = str_replace('/', '-', $_POST['datetime']);
+        $date = date('Y-m-d', strtotime($date));
+        $this->datetime  = $date;
         $this->load->database();
         $this->db->insert('event', $this);
     }
