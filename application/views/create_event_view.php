@@ -44,15 +44,15 @@
           	<h2 class="sub-header"> Add new event</h2>
 			<?php echo form_open('events/save'); ?>
 		       <?php echo "title"; ?>: 
-		       <?php echo form_input('title'); ?>
+		       <?php echo form_input('title', '','class="form-control"'); ?>
 		       </br>
 			   <?php echo "description"; ?>: 
-		       <?php echo form_input('description'); ?>
+		       <?php echo form_input('description', '','class="form-control"'); ?>
 		       </br>
 		       <?php echo "datetime"; ?>: 
-		       <?php echo form_input('datetime'); ?>	
+		       <?php echo form_input('datetime', '','class="form-control"'); ?>	
 			   </br>	
-			<?php echo form_submit('mysubmit','Submit!');  ?>
+			<?php echo form_submit('mysubmit','Submit','class="btn btn-info"');  ?>
 			<?php echo form_close(); ?>	
           
           
