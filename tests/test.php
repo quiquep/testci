@@ -13,7 +13,10 @@ class Test extends PHPUnit_Framework_TestCase
 	{
 		// Nothing
 	}
-		
+	
+	/**
+	 * @test
+	 */		
 	public function testSample() {
 		$this->assertEquals(1, 1);
 	}
