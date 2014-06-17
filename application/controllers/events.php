@@ -27,6 +27,8 @@ class Events extends CI_Controller {
 	
 	public function listAll()
 	{
+		$session_data = $this->session->userdata('logged_in');
+		$data['username'] = $session_data['username'];
 		$data['events'] = $this->Event->getAll();
 		$this->load->view('list_events_view' , $data);
 	}

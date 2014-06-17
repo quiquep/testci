@@ -1,5 +1,5 @@
 <?php include "include/header.php"; ?>
-
+ 
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
@@ -10,7 +10,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Test</a>
+          <a class="navbar-brand" href="#">Welcome <?php echo $username; ?>!</a>
+         
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -18,6 +19,7 @@
             <li><a href="#">Settings</a></li>
             <li><a href="#">Profile</a></li>
             <li><a href="#">Help</a></li>
+             <li><?php echo anchor('home/logout', 'Logout', 'class="link-class"') ?></li>
           </ul>
           <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
@@ -26,7 +28,7 @@
       </div>
     </div>
     
-
+	
     
     <div class="container-fluid">
       <div class="row">
