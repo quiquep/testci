@@ -1,7 +1,7 @@
 testci
 ======
 
-Test CodeIgniter 2.2 and Travis CI.
+CodeIgniter 2.2, Travis CI, Backbone JS, Bootstrap and REST Controllers.
 
 
 Git plugin for Eclipse:
