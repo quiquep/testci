@@ -25,18 +25,14 @@ class Events extends CI_Controller {
 		$this->listAll();
 	}
 	
-	public function listAll($format='html')
+	public function listAll()
 	{
 		$data['events'] = $this->Event->getAll();
-		if($format == 'json') {
-			$this->load->view('list_events_view_json' , $data);
-		} else {
-			$this->load->view('list_events_view' , $data);
-		}
+		$this->load->view('list_events_view' , $data);
 	}
 	
-	public function admin()
+	public function rest()
 	{
-		$this->load->view('list_events_admin_view');
+		$this->load->view('list_events_rest_view');
 	}
 }
