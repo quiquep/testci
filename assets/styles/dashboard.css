@@ -94,3 +94,10 @@ body {
   display: inline-block;
   border-radius: 50%;
 }
+
+/*
+ * News
+ */
+.carousel-container{
+  width: 75%;
+}
