@@ -21,7 +21,7 @@
 	  		<?php echo form_input('username', '','class="form-control"'); ?>
 	  		<br/>
       		<?php echo "Password"; ?>: 
-	  		<?php echo form_input('password', '','class="form-control"'); ?>
+	  		<?php echo form_password('password', '','class="form-control"'); ?>
 	  		<br/>
         <?php echo form_submit('mysubmit','Login','class="btn btn-lg btn-primary btn-block"');  ?>
         
