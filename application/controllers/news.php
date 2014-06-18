@@ -25,4 +25,9 @@ class News extends CI_Controller {
 		$this->model->insert();
 		$this->list_all();
 	}
+
+	public function rest()
+	{
+		$this->load->view('news/list_rest');
+	}
 }
