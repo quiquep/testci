@@ -322,7 +322,9 @@
 	// Is there a "remap" function? If so, we call it instead
 	if (method_exists($CI, '_remap'))
 	{
-		$CI->_remap($method, array_slice($URI->rsegments, 2));
+		if (!defined('PHPUNIT_TEST') ) {  // Testing hack!!
+			$CI->_remap($method, array_slice($URI->rsegments, 2));
+		}
 	}
 	else
 	{
@@ -385,7 +387,10 @@
  *  Is there a "post_system" hook?
  * ------------------------------------------------------
  */
-	$EXT->_call_hook('post_system');
+	if ($EXT->_call_hook('display_override') === FALSE && !defined('PHPUNIT_TEST')) 
+	{
+		$EXT->_call_hook('post_system');		
+	}
 
 /*
  * ------------------------------------------------------
