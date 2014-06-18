@@ -9,7 +9,7 @@ class EventModelTest extends CITestCase
 
 	public function testDummyEvent()
 	{
-		$event= $this->Event->getDummyEvent();
+		$event= $this->CI->Event->getDummyEvent();
 		$this->assertTrue("test title" == $event->title);
 	}
 }
