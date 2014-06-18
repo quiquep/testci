@@ -16,9 +16,10 @@ install:
   - mv CodeIgniter-2.2.0/index.php index.php
   - rm -rf CodeIgniter-2.2.0
 
-# create database
+# create database tables
 before_script:
   - mysql -e 'create database events;'
+  - mysql events < schema.sql
   
 # run multiple test commands
 script:
