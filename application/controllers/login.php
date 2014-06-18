@@ -5,11 +5,11 @@ class Login extends CI_Controller {
  function __construct()
  {
    parent::__construct();
-   $this->load->model('Event');
  }
 
  function index()
  {
+   $this->load->model('Event'); 	
    $this->load->helper(array('form'));
    $this->load->view('login_view');
  }
