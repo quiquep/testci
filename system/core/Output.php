@@ -356,8 +356,11 @@ class CI_Output {
 
 		// Parse out the elapsed time and memory usage,
 		// then swap the pseudo-variables with the data
-
-		$elapsed = $BM->elapsed_time('total_execution_time_start', 'total_execution_time_end');
+		$elapsed = 0;
+		if(isset($BM)) 
+		{		
+			$elapsed = $BM->elapsed_time('total_execution_time_start', 'total_execution_time_end');
+		}
 
 		if ($this->parse_exec_vars === TRUE)
 		{
@@ -370,7 +373,7 @@ class CI_Output {
 		// --------------------------------------------------------------------
 
 		// Is compression requested?
-		if ($CFG->item('compress_output') === TRUE && $this->_zlib_oc == FALSE)
+		if (isset($CFG) && $CFG->item('compress_output') === TRUE && $this->_zlib_oc == FALSE)
 		{
 			if (extension_loaded('zlib'))
 			{

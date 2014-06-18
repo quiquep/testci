@@ -1,24 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<phpunit bootstrap="tests/bootstrap.php" colors="true">
-    <php>
-        <var name="db_dsn" value="mysql:dbname=hello_world_test;host=localhost"/>
-        <var name="db_username" value="root"/>
-        <var name="db_password" value=""/>
-    </php>
-
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpunit bootstrap="tests/bootstrap.php">
     <testsuites>
-        <testsuite name="Tests">
-            <directory>./tests/</directory>
+        <testsuite name="TestSuite">
+            <directory>tests/</directory>
         </testsuite>
     </testsuites>
-
+    <php>
+        <const name="PHPUNIT_TEST" value="1" />
+        <const name="PHPUNIT_CHARSET" value="UTF-8" />
+        <server name="REMOTE_ADDR" value="0.0.0.0" />
+    </php>
     <filter>
-        <whitelist>
-            <directory>./</directory>
-            <exclude>
-                <directory>./tests</directory>
-            </exclude>
-        </whitelist>
+        <blacklist>
+            <directory suffix=".php">system</directory>
+            <!--directory suffix=".php">application/libraries</directory-->
+        </blacklist>
     </filter>
 </phpunit>
