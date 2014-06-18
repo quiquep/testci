@@ -23,6 +23,6 @@ before_script:
   
 # run multiple test commands
 script: 
-  - phpunit --coverage-text
-  - phpunit --configuration phpunit.xml --coverage-text
+  - phpunit 
+  #- phpunit --configuration phpunit.xml --coverage-text
 
