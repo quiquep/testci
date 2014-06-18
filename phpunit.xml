@@ -2,8 +2,7 @@
 <phpunit bootstrap="tests/bootstrap.php">
     <testsuites>
         <testsuite name="TestSuite">
-            <directory>tests/helpers</directory>
-            <directory>tests/models</directory>
+            <directory>tests/</directory>
         </testsuite>
     </testsuites>
     <php>
