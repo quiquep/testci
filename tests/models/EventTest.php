@@ -1,5 +1,7 @@
 <?php
 
+require "../CITest.php";
+
 class EventModelTest extends CITestCase
 {
 	public static function setUp()
