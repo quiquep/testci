@@ -2,7 +2,7 @@
 
 class EventModelTest extends CITestCase
 {
-	public static function setUp()
+	public function setUp()
 	{
 		$this->CI->load->model('Event');
 	}
