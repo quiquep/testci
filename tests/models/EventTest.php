@@ -1,13 +1,10 @@
 <?php
 
-class EventModelTest extends PHPUnit_Framework_TestCase
+class EventModelTest extends CITestCase
 {
-	private $CI;
-
-	public static function setUpBeforeClass()
+	public static function setUp()
 	{
-		$CI =& get_instance();
-		$CI->load->model('Event');
+		$this->CI->load->model('Event');
 	}
 
 	public function testDummyEvent()
