@@ -1,6 +1,8 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Events extends CI_Controller {
+require APPPATH.'/libraries/MY_Protected_Controller.php';
+
+class Events extends MY_Protected_Controller {
 	
 	public function __construct()
 	{
