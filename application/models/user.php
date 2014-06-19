@@ -1,6 +1,8 @@
 <?php
 
 Class User extends CI_Model{
+	var $username;
+	var $password;
 
  function login($username, $password){
 
@@ -20,6 +22,21 @@ Class User extends CI_Model{
    {
      return false;
    }
+ }
+ 
+ function create($username,$password){
+ 	
+ 	$this->username   = $username;
+ 	$this->password = MD5($password);
+ 	$this->load->database();
+ 	$this->db->insert('users', $this);
+ }
+ 
+ function getAll()
+ {
+ 	$this->load->database();
+ 	$query = $this->db->get('users');
+ 	return $query->result('User');
  }
 }
 ?>
