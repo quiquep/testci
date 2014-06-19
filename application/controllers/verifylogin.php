@@ -35,7 +35,7 @@ class VerifyLogin extends CI_Controller {
    $username = $this->input->post('username');
 
    //query the database
-   $result = $this->user->login($username, $password);
+   $result = $this->user->check_database($username, $password);
 
    if($result)
    {
@@ -48,6 +48,8 @@ class VerifyLogin extends CI_Controller {
        );
        $this->session->set_userdata('logged_in', $sess_array);
      }
+     
+    
      return TRUE;
    }
    else

@@ -15,11 +15,22 @@
 
           	<h2 class="sub-header"> Add new user</h2>
 			<?php echo form_open('users/save'); ?>
+			   <?php echo validation_errors('<div class="error">', '</div>'); ?>
 		       <?php echo "Username"; ?>: 
-		       <?php echo form_input('username', '','class="form-control"'); ?>
+		       <?php $attributes = array(
+		       					'value' => set_value('username'),
+		       					'name'  => 'username',	
+		       					'class' => 'form-control',
+		       					);?>
+		       <?php echo form_input($attributes); ?>
 		       </br>
-			   <?php echo "Password"; ?>: 
-		       <?php echo form_password('password', '','class="form-control"'); ?>
+			   <?php echo "Password"; ?>:
+			   <?php $attributesPassword = array(
+		       					'value' => set_value('password'),
+		       					'name'  => 'password',	
+		       					'class' => 'form-control',
+		       					);?> 
+		       <?php echo form_password($attributesPassword); ?>
 		       </br>
 		    <?php echo form_submit('mysubmit','Submit','class="btn btn-info"');  ?>
 			<?php echo form_close(); ?>	

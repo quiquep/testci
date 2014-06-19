@@ -18,6 +18,15 @@ body {
 }
 
 
+/**
+* Error	
+*/
+
+.error {
+    color: red;
+}
+
+
 /*
  * Sidebar
  */
