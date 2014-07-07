@@ -31,7 +31,7 @@
 					     <tr>
 		                  <td><?php echo $event->title; ?></td>
 		                  <td><?php echo $event->description; ?></td>
-		                  <td><?php echo $event->datetime; ?></td>
+		                  <td><?php echo $event->datetime->format('Y-m-d'); ?></td>
 		                </tr>
 				<?php } ?>	
               

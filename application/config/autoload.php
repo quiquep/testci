@@ -114,3 +114,15 @@ $autoload['model'] = array();
 
 /* End of file autoload.php */
 /* Location: ./application/config/autoload.php */
+
+/*PHP Active Record*/
+
+require_once APPPATH.'/libraries/php-activerecord/ActiveRecord.php';
+
+ ActiveRecord\Config::initialize(function($cfg)
+{
+     $cfg->set_model_directory(APPPATH.'/models');
+    $cfg->set_connections(array(
+    'development' => 'mysql://root:root@127.0.0.1/testci'));
+});
+	

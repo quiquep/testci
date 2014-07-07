@@ -7,7 +7,7 @@ class Events extends MY_Protected_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Event');
+// 		$this->load->model('Event');
 	}
 	
 	public function index()
@@ -29,15 +29,27 @@ class Events extends MY_Protected_Controller {
 	
 	public function save()
 	{	
-		$this->Event->insert_entry();
-		$this->listAll();
+		/*Using PHP Active Record*/
+		$event = new EventActiveRecord();
+		$event->title = $_POST['title'];
+		$event->description = $_POST['description'];
+		$date = str_replace('/', '-', $_POST['datetime']);
+		$date = date('Y-m-d', strtotime($date));
+		$event->datetime = $date;
+		$event->save();
+				
+		/************************/
+// 		$this->Event->insert_entry();
+// 		$this->listAll();
+		redirect('/events/');
 	}
 	
 	public function listAll()
 	{
 		$session_data = $this->session->userdata('logged_in');
 		$data['username'] = $session_data['username'];
-		$data['events'] = $this->Event->getAll();
+		/*Usando PHP Active Record */
+		$data['events'] = EventActiveRecord::find('all');
 		$this->load->view('list_events_view' , $data);
 	}
 	
